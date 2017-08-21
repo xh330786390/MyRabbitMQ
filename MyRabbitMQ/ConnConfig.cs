@@ -12,11 +12,10 @@ namespace MyRabbitMQ
     public class ConnConfig
     {
         public static ConnConfig Config = null;
-
         /// <summary>
-        /// 端口
+        /// MQ服务器地址
         /// </summary>
-        public ushort Port { get; set; }
+        public string AMQPConnectionUrl { get; set; }
 
         /// <summary>
         /// 虚拟主机
@@ -34,15 +33,14 @@ namespace MyRabbitMQ
         public string Password { get; set; }
 
         /// <summary>
-        /// MQ服务器地址
+        /// 交换器名称
         /// </summary>
-        public Uri AMQPConnectionUrl { get; set; }
+        public string ExchangeName { get; set; }
 
         /// <summary>
         /// 队列名称
         /// </summary>
         public string QueueName { get; set; }
-
         static ConnConfig()
         {
             Config = new ConnConfig();
