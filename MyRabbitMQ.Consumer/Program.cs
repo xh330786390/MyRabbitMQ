@@ -10,10 +10,14 @@ namespace MyRabbitMQ.Consumer
     {
         static void Main(string[] args)
         {
-            List<string> lt = new List<string>() { "Q1", "Q2", "Q3" };
+            List<string> lt_fanout = new List<string>() { "Fanout1", "Fanou2", "Fanout3" };
+            List<string> lt_topic = new List<string>() { "topic.1", "topic.2", "topic.3", "topic.1.a" };
+            List<string> lt_key = new List<string>() { "topic.#" };
 
             Consumer consumer = new Consumer();
-            consumer.DirectConsumer("Direct1");
+            consumer.TopicConsumer("Topic", "topic.2", lt_key);
+
+            //consumer.DirectConsumer("Direct1");
 
             //consumer.FanoutConsumer(StaticiParam.MQ_Config.ExchangeName, lt);
             Console.Read();

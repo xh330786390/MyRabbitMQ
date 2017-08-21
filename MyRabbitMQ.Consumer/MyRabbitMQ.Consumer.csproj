@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consumer.Topic.cs" />
     <Compile Include="Consumer.Fanout.cs" />
     <Compile Include="Consumer.Direct.cs" />
     <Compile Include="Program.cs" />

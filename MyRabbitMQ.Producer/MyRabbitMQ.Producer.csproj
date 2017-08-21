@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Producer.cs" />
     <Compile Include="Producer.Fanout.cs" />
     <Compile Include="Producer.Topic.cs" />
     <Compile Include="Producer.Direct.cs" />
